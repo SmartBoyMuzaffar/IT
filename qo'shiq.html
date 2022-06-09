@@ -1,0 +1,28 @@
+<style>
+
+audio {
+  display: none;
+}
+a:hover{
+    background: blue;
+    color: red;
+
+}
+
+  a {
+    text-decoration: none;
+  }
+</style>
+<body bgcolor="black" />
+<a href="#" onclick="play1()" >
+ 🎧 Muzaffar 
+<audio controls loop id="R1" class="R2" >
+  <source src="Muzaffar.mp3">
+</audio>
+
+</a>
+<script>
+ function play1(){ 
+    document.getElementById("R1").play();
+ }
+</script>

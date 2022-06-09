@@ -1,0 +1,11 @@
+  div {
+    height: 300px;
+    width: auto;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 3px 10px 13px 13px black;
+    color: red;
+  }
+fieldset {
+  border-radius: 12px;
+}

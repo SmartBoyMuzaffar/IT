@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+</head>
+<body>
+   <p><label> First Name: <input type="text" name="firstName"> </label></p>
+   <p><label> Last Name: <input type="text" name="lastName"> </label></p>
+   <button onclick="getValues()"> Get Values </button>
+
+   <script>
+      function getValues() {
+         var firstName = document.getElementsByName("firstName")[0].value;
+         var lastName = document.getElementsByName("lastName")[0].value;
+         var fullName = "Your full name is " + firstName + " " + lastName;
+      
+         alert(fullName);
+      }
+   </script>
+</body>
+</html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+</head>
+<body>
+   <p> Try to input a number that's outside the range of <b>18-65</b> to see how it works. </p>
+                       
+   <form action="https://codeliber.com/form-action.php">
+      <label> Age: <input type="number" name="age" min="18" max="65" required></label>
+      <input type="submit">
+   </form>
+   
+   <p> This demo requires <b>internet connection</b>. </p>
+</body>
+</html>

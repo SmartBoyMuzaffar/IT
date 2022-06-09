@@ -1,0 +1,16 @@
+body
+{
+	margin: 0px auto 0px auto;
+}
+
+.leftContent
+{
+	width: 28%;
+	float: left;	
+}
+
+.rightContent{
+	width: 72%;
+	float: right;
+	background-color:green;
+}

@@ -1,0 +1,1152 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>React-Template</title>
+    </head>
+    <body>
+      
+   <div id="load">  
+  <svg id="loader_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 466.9" width="2185" height="2500">
+<style>
+.one{
+fill:url(#svg_1)
+}
+.two{
+fill:url(#svg_2)
+}
+.three{
+fill:url(#svg_3)
+}
+.four{
+fill:url(#svg_4)
+}
+</style>    
+<style>
+  
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+    -webkit-user-select:none;
+       -moz-user-select:none;
+        -ms-user-select:none;
+            user-select:none;
+}
+body {
+    max-height:100vh;
+    max-width:100vw;
+}
+.app{
+    position:absolute;
+    width:100%;
+    top:0;
+    height:100%;
+    left:0;
+    background:#fff;        
+    overflow:hidden;
+}
+#loader_logo{
+    width:100px;
+    height:100px;
+}
+#load{
+    position:absolute;
+    z-index:800;
+    max-height:100vh;
+    max-width:100vw;
+    width:100%;height:100%;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+
+
+/*Top Header Component*/
+.header{
+    width:94%;
+    margin:5px 3%;
+    height:50px;
+    border-radius:4px;
+    -webkit-box-shadow:0px 0px 2px 0.5px rgba(0,0,0,0.2);
+            box-shadow:0px 0px 2px 0.5px rgba(0,0,0,0.2);
+    background-color:rgba(255, 255, 255, 0.2);
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+.header > input{
+    -webkit-box-flex:1;
+        -ms-flex:1;
+            flex:1;
+    border:none;
+    outline:none;
+    padding:0.2rem;
+    font-size:0.8rem;
+    font-family:"Product Sans";
+    font-size:17px;
+    padding-left:5px;
+    background-color:inherit;
+    color:rgb(150,150,150);
+}
+.header > span{
+    padding:0.5rem 0.7rem;
+    border-radius:4px;
+    z-index:2;
+    /*box-shadow:0px 0px 2px 0.5px rgba(0,0,0,0.2);*/
+    margin:0.5rem;
+}
+.header > .fa-user{
+   background:#4488ff;
+   color:#fff;
+   padding:0.6rem 0.8rem;
+   border-radius:50%;
+}
+
+.tagCon{
+    overflow:scroll;
+    border-width:0px 0px 1px 0px;
+    border-style:solid;
+    border-color:rgb(200,200,200);
+    padding-bottom:0px;
+    background-color:rgb(255,255,255);
+    padding:25px 0 10px 0;
+    z-index:2;
+}
+.tagCon .tag:first-child{
+    margin-left:0px;    
+    
+}
+.tagCon .tag{
+    padding:7px 25px;
+    white-space:nowrap ;
+    text-align:center;
+    color:rgb(150,150,150);
+    margin:10px 0;
+    z-index:3;
+    height:40px;
+    
+}
+.tagCon .k{
+    border-bottom:3px solid green;
+    color:green;
+}
+
+/*Bottom Header Component*/
+
+
+
+.bottom_header{
+    width:100%;
+    height:45px;
+    background:#fff;
+    border:none; 
+    border-top:1px solid #ccc;
+    position:absolute;
+    bottom:0;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:space-evenly;
+        -ms-flex-pack:space-evenly;
+            justify-content:space-evenly;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+
+.bottom_header > .sec{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    font-family:"Product Sans";
+    font-size:12px;
+    padding:5px 10px;
+}
+.bottom_header > .sec > .img{
+    height:20px;
+    -o-object-fit:contain;
+       object-fit:contain; 
+    -webkit-filter: invert(50%); 
+            filter: invert(50%);
+}
+.bottom_header > .sec > .active{
+    -webkit-filter: invert(0%);
+            filter: invert(0%);
+}
+
+.bottom_header > .sec > p{
+    font-family:"Product Sans";
+}
+
+
+
+/*Side Bar Component of Seaech Bar at the Top*/
+.side-bar{
+    background:rgba(0,0,0,0.4);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:3;
+    display:none;
+}
+.side-bar--active{
+    display:block;
+}
+.side-bar .con{
+    background:#fff;
+    width:80%;
+    height:100%;
+    position:absolute;
+    top:0;left:-80%;
+    z-index:3;
+    -webkit-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+    overflow:scroll;
+}
+.side-bar >.con--active{
+    left:0%;
+}
+.side-bar >.con--jnactive{
+    left:-80%;
+}
+.side-bar .con > .google_play_logo{
+    width:100%;
+    height:50px;
+    border-bottom:0.5px solid rgba(0,0,0,0.2);
+}
+.side-bar .con > .google_play_logo > img{
+    width:80%;
+    -o-object-fit:contain;
+       object-fit:contain;    
+}
+.side-bar .con > .section{
+   border-bottom:0.5px solid rgba(0,0,0,0.2);
+   padding:5px 0;
+}
+
+.section-item{
+    width:100%;
+    height:45px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    padding:5px 0.5rem;
+    font-family:"Product Sans";
+    font-size:17px;
+    background-color:inherit;
+    color:rgb(100,100,100);
+    display:flex;-webkit-transition:1s;-o-transition:1s;transition:1s;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+.section-item span{
+    padding:0px 1rem;
+}
+.section-item:active{
+    background:rgba(0,0,0,0.2);
+    color:#000;
+}
+
+/*Main Page Stuffs*/
+
+
+
+.main-page{
+    width:100%;
+    height:calc(100% - 45px);
+    overflow:hidden;
+    z-index:2;
+}
+.main-page > h1::last-child{
+    margin-bottom:100px;
+}
+
+.link{
+    text-decoration:none;
+    cursor:none;
+}
+    
+
+/*For You Component*/
+.imageCon{
+    width:98%;
+    height:150px;
+    margin:0.5rem 1%;
+}
+.imageCon img{
+    width:100%;
+    height:100%;
+    background-size:cover;
+    border-radius:5px;
+    background-position:center;
+    -webkit-box-shadow:0px 0px 2px 2px rgba(0,0,0,0.1);
+            box-shadow:0px 0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.gameSection{
+    width:100%;
+    height:210px;
+    /*box-shadow:0px 0px 1px 1px rgba(0,0,0,0.2);*/
+    margin:5px 0;
+}
+.gameSection:last-child{
+    margin-bottom:100px;
+}
+.gameSection > .game_sec_heading{
+display:-webkit-box;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+        justify-content:space-between;
+height:50px;
+width:100%;
+-webkit-box-align:center;
+    -ms-flex-align:center;
+        align-items:center;
+padding:1.3rem 1rem;
+-webkit-transition:0.8s;
+-o-transition:0.8s;
+transition:0.8s;
+}
+.gameSection > .game_sec_heading:active{
+    background:rgba(0,0,0,0.2);
+}
+.gameSection > .game_sec_heading > .game_sec--one > h3{
+    font-family:"Product Sans";
+    color:rgba(0,0,0,0.8);
+}
+.gameSection > .game_sec_heading > .game_sec--one > p{
+    font-family:"Product Sans";
+    color:rgb(100,100,100);
+    font-size:13px;
+}
+.games-con{
+    width:100%;
+    height:170px;
+    overflow:auto;
+    margin:5px 0;
+    white-space:nowrap;
+    
+}
+.games-con > .game-app{
+    display:inline-block ;
+    width:110px;
+    border-radius:5px;
+    height:80%;
+    -webkit-box-shadow:0px 0px 2px 1.5px rgba(0,0,0,0.1);
+            box-shadow:0px 0px 2px 1.5px rgba(0,0,0,0.1);
+    padding:5px;
+    margin:5px 10px;
+    vertical-align: top;
+}
+.games-con > .game-app > .game-app--img{
+    width:100%;
+    height:70%;
+}
+.games-con > .game-app > .game-app--img img{
+    width:100%;
+    height:100%;
+}
+.games-con > .game-app > .game-app--info{    
+    width:100%;
+    height:30%;
+    font-family:"Product Sans";
+    color:rgb(100,100,100);
+    font-size:10px;
+}
+
+
+.games-con > .game-app > .game-app--info > p:nth-child(1){
+    color:#000;
+    margin-top:3px;
+    font-size:13px;
+    font-weight:bold;
+    text-transform:inherit;
+}
+.games-con > .game-app > .game-app--info > p:nth-child(2){
+    margin-top:3px;
+    font-size:10px;
+}
+
+.main-page > div:nth-child(2){
+    overflow:scroll;
+}
+.t{
+    width:100%;height:calc(100% - 45px);
+    overflow:scroll;
+}
+
+img::empty{
+    background-size:400px;
+    -webkit-animation:loading 1.4s infinite ease-in;
+            animation:loading 1.4s infinite ease-in;
+    background-image: -o-linear-gradient(left, #ddd 30px, rgba(229, 229, 229, 1) 30px, #eee 90px);
+    background-image: linear-gradient(90deg, #ddd 30px, rgba(229, 229, 229, 1) 30px, #eee 90px);    
+}
+@-webkit-keyframes loading {
+ 0%,40%{
+ background-position: -85px;
+ }
+ 100% {
+ background-position: 300px;
+ }
+}
+@keyframes loading {
+ 0%,40%{
+ background-position: -85px;
+ }
+ 100% {
+ background-position: 300px;
+ }
+}
+
+.top-chart-tagCon{
+     width:100%;height:auto;
+     overflow:scroll;padding:10px 0px;
+     white-space:nowrap;-webkit-transition:1s;-o-transition:1s;transition:1s;
+     position:-webkit-sticky;
+     position:sticky;top:0px;background:#fff;
+} 
+.top-chart-tagCon > .top-chart-tag{
+    display:inline-block;
+    padding:4px 20px;
+    border:0.6px solid rgba(0,0,0,0.2);
+    font-family:"Product Sans";
+    color:rgb(100,100,100);
+    border-radius:20px;font-size:14px;
+    vertical-align:center;
+    margin:0px 10px;font-weight:bold;
+    -webkit-transition:0.7s;
+    -o-transition:0.7s;
+    transition:0.7s;
+
+}
+.top-chart-tagCon > .top-chart-tag:active{
+    background:#4ab96a;color:#fff;
+}
+
+.top-chart-tagCon > .top-charts-game-apps{
+    width:100%;height:100%;padding:10px 0;
+    overflow:scroll;
+}
+
+.tp{
+    height:calc(100% - 45px);
+}
+
+.k > .top-charts-game-apps > .top-charts-apps{
+ display:-webkit-box;
+    display:-ms-flexbox;
+ display:flex;
+ align-items:center;
+ -webkit-box-align:center;
+    -ms-flex-align:center;
+ 
+/* 
+ display:-ms-grid;
+ 
+ display:grid;place-items:center;
+ -ms-grid-columns:23% 10% 70%;
+ grid-template-columns:23% 10% 70%;*/
+ padding:1rem 0;-webkit-transition:0.5s;-o-transition:0.5s;transition:0.5s;
+}
+.k > .top-charts-game-apps > .top-charts-apps:active{
+    background:rgba(0,0,0,0.1);
+    font-family:"Product Sans";
+}
+
+.k > .top-charts-game-apps:last-child{
+    margin-bottom:70px;
+}
+.k > .top-charts-game-apps > .top-charts-apps > img{
+    width:50px;
+    padding:0px;
+}
+.k > .top-charts-game-apps > .top-charts-apps > *{
+    padding:10px 2rem;
+}
+.k > .top-charts-game-apps > .top-charts-apps > .info > .top-charts-apps--name{
+    font-weight:bold;
+}
+.k > .top-charts-game-apps > .top-charts-apps > .info > .top-charts-apps--tag{
+    font-size:14px;
+    margin-top:4px;
+    color:rgb(50,50,50);
+}
+.k > .top-charts-game-apps > .top-charts-apps > .info > .top-charts-apps--rating{
+    font-size:10px;margin-top:2px;
+    color:rgb(100,100,100);
+}
+
+.k > .category-card{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    width:100%;
+    height:70px;
+    background:#fff;
+    -webkit-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+    margin:1rem 0;
+}
+.k > .category-card:last-child{
+    margin-bottom:70px;
+}
+.k > .category-card > img{
+    width:30%;
+}
+.k > .category-card > p{
+  font-weight:bold;
+  color:rgb(100,100,100);
+  font-size:17px;
+  width:60%;
+  text-align:center;
+}
+
+
+
+
+.choice-page{
+    width:98%;
+    height:200px;
+    margin-left:1%;
+    background:#fff;
+    -webkit-box-shadow:0px 0px 1px 0.5px rgba(0,0,0,0.1);
+            box-shadow:0px 0px 1px 0.5px rgba(0,0,0,0.1);
+}
+
+.choice-page > .choice-page--header{
+display:-webkit-box;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+        justify-content:space-between; 
+-webkit-box-align:center; 
+    -ms-flex-align:center; 
+        align-items:center;
+font-family:"Product Sans";
+height:50px;  
+}
+.choice-page > .choice-page--header > *{
+    padding:1rem;
+    -webkit-transition:0.3s;
+    -o-transition:0.3s;
+    transition:0.3s;
+}
+
+.choice-page > .choice-page--header:active{
+    background:rgba(0,0,0,0.1);
+}
+.choice-page > .choice-option{
+    width:calc(100% - 10px);
+    height:150px;
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns:1fr 3px 1fr;
+    grid-template-columns:1fr 1fr;
+    grid-gap:3px;
+    place-items:center;
+    border-radius:3px;
+}
+.choice-page > .choice-option > *{
+    background:#fff;
+    border-radius:10px;
+    border:0.7px solid rgba(0,0,0,0.1);
+    padding:1.3rem 4rem;
+    -webkit-transition:0.3s;
+    -o-transition:0.3s;
+    transition:0.3s;
+}
+.choice-page > .choice-option > *:active{
+    background:#5588ff;
+    color:#fff;
+}
+
+
+
+.k > .editor-header{
+    width:100%;
+    height:50px;
+    padding:1rem;
+    -webkit-transition:0.4s;
+    -o-transition:0.4s;
+    transition:0.4s;
+    font-family:"Product Sans";
+    color:rgb(50,50,50);
+    position:-webkit-sticky;
+    position:sticky;
+    top:0px;
+    background:#fff;
+}
+.k > .editor-header:active{
+    background:rgba(0,0,0,0.1);
+}
+
+.k > .editor-choice-card{
+    width:100%;
+    padding:5px;
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    place-items:center;
+    margin:5px 0px;  
+    font-family:"Product Sans";     
+}
+.k > .editor-choice-card > .info-2{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+}
+.k > .editor-choice-card > .info-1{
+    width:70px;
+    height:70px;
+    background:#efefef;
+    border-radius:5px;
+    -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+            box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+}
+.k > .editor-choice-card > .info-1 > *{
+    width:100%;
+    height:100%;
+    border-radius:5px;
+}
+.k > .editor-choice-card > .info-2 > .small-pics{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.k > .editor-choice-card > .info-2 > .small-pics > *{
+    width:20px;
+    height:20px;
+    margin:5px;
+    background-size:400px;
+    -webkit-animation:loading 1.4s infinite ease-in;
+            animation:loading 1.4s infinite ease-in;
+    background-image: -o-linear-gradient(left, #ddd 30px, rgba(229, 229, 229, 1) 30px, #eee 90px);
+    background-image: linear-gradient(90deg, #ddd 30px, rgba(229, 229, 229, 1) 30px, #eee 90px);    
+}
+.k > .editor-choice-card:last-child{
+    margin-bottom:80px;
+}
+
+</style>
+<linearGradient id="svg_1" gradientUnits="userSpaceOnUse" y1="112.094" x2="261.746" y2="112.094">
+<stop offset="0" stop-color="#63be6b"/>
+<stop offset=".506" stop-color="#5bbc6a"/>
+<stop offset="1" stop-color="#4ab96a"/>
+</linearGradient>
+<path class="one" d="M261.7 142.3L15 1.3C11.9-.5 8-.4 5 1.4c-3.1 1.8-5 5-5 8.6 0 0 .1 13 .2 34.4l179.7 179.7 81.8-81.8z"/>
+
+<linearGradient id="svg_2" gradientUnits="userSpaceOnUse" x1=".152" y1="223.393" x2="179.896" y2="223.393">
+<stop offset="0" stop-color="#3ec6f2"/>
+<stop offset="1" stop-color="#45afe3"/>
+</linearGradient>
+<path class="two" d="M.2 44.4C.5 121.6 1.4 309 1.8 402.3L180 224.1.2 44.4z"/>
+
+<linearGradient id="svg_3" gradientUnits="userSpaceOnUse" x1="179.896" y1="229.464" x2="407.976" y2="229.464">
+<stop offset="0" stop-color="#faa51a"/>
+<stop offset=".387" stop-color="#fab716"/>
+<stop offset=".741" stop-color="#fac412"/>
+<stop offset="1" stop-color="#fac80f"/>
+</linearGradient>
+<path class="three" d="M402.9 223l-141.2-80.7-81.9 81.8 92.4 92.4L403 240.3c3.1-1.8 5-5.1 5-8.6 0-3.6-2-6.9-5.1-8.7z"/>
+
+<linearGradient id="svg_4" gradientUnits="userSpaceOnUse" x1="1.744" y1="345.521" x2="272.296" y2="345.521">
+<stop offset="0" stop-color="#ec3b50"/>
+<stop offset="1" stop-color="#e7515b"/>
+</linearGradient>
+<path class="four" d="M1.7 402.3c.2 33.3.3 54.6.3 54.6 0 3.6 1.9 6.9 5 8.6 3.1 1.8 6.9 1.8 10 0l255.3-148.9-92.4-92.4L1.7 402.3z"/>
+</svg>      
+</div>
+
+
+    
+  
+      
+  <!-- Link Swiper's CSS -->
+<!--
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!---
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ -->
+ <script type="text/babel">
+const {useState, useEffect,useRef} = React;
+const {MemoryRouter:Router, Route, Link, Switch} = ReactRouterDOM; 
+const EditorChoice=()=>{
+    return(
+  <div className="k tp">
+      <h3 className="editor-header">Latest Stories</h3>      {[["https://i.ibb.co/8bRJQjP/IMG-20201014-130546.jpg","Offline Games Worth"],     
+["https://i.ibb.co/BKyKRvP/IMG-20201014-130607.jpg","PVP Games"], 
+["https://i.ibb.co/DC2Z7Fn/IMG-20201014-130647.jpg","Hidden-playGames"],  
+["https://i.ibb.co/MPWzjKF/IMG-20201014-130500.jpg","Ready,Set,Go"],  ["https://i.ibb.co/7V21DM6/IMG-20201014-130518.jpg","Behind The Wheel"],
+["https://i.ibb.co/DC2Z7Fn/IMG-20201014-130647.jpg","Hidden-playGames"],  
+["https://i.ibb.co/MPWzjKF/IMG-20201014-130500.jpg","Ready,Set,Go"],  ["https://i.ibb.co/7V21DM6/IMG-20201014-130518.jpg","Behind The Wheel"],
+].map((e,i)=>
+<div key={i} className="editor-choice-card">
+        <div className="info-1">
+         <img src={e[0]} border="0" />
+        </div>        
+        <div className="info-2">
+           <p>{e[1]}</p>
+           <div className="small-pics">
+              <div></div><div></div>
+              <div></div><div></div>
+           </div>
+        </div>        
+      </div>)}          
+  </div>
+    )
+}
+const ImageSlider=()=>{
+const [images,setImages]=useState(
+["https://www.naspers.com/getmedia/06e07343-ee07-4000-8ec1-3d06fe8e1515/SoloLearn-2018.png.aspx?maxsidesize=910",
+"https://www.androidcentral.com/sites/androidcentral.com/files/styles/w830/public/article_images/2019/08/best-android-games-hero.jpeg?itok=7lL0TIjr","https://www.xda-developers.com/files/2017/01/Google-Play-Games-Feature-Image-XDA-Portal-Red-810x298_c.png","https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","http://www.archerybuff.com/wp-content/themes/Curious/images/archery-innovative-games.png","https://cdn57.androidauthority.net/wp-content/uploads/2019/09/Chess-Free-best-chess-games-for-Android-712x400.jpg"]
+);
+const [counter,setCounter]=useState(0);
+useEffect(()=>{
+let cI = setInterval(()=>(counter==images.length-1)?setCounter(0):setCounter(counter+1), 2500);
+  return ()=>clearInterval(cI);     
+},[counter]);
+  
+    return(
+        <div className="imageCon">
+            <img src={images[counter]} alt="Featured Games"/>      
+        </div>
+    )
+}
+const CategoryTags=({arr})=>(
+    <div className="top-chart-tagCon">
+     {arr.map((e,i)=><div key = {i}className="top-chart-tag">{e}</div>)} 
+  </div>
+); 
+const Games=({title,description,paid,arr})=>{
+    return(
+<div className="gameSection">
+  <div className="game_sec_heading">
+    <div className="game_sec--one">
+       <h3>{title}</h3>
+       <p>{description}</p>
+    </div>
+    <div className="game_sec--two">
+       <span className ="fa fa-arrow-right"></span>
+     </div>
+  </div>
+  
+  <div className="games-con"> {arr.map((e,i)=>
+    <div key={i} className="game-app">
+      <div className="game-app--img">
+          <img src={e[0]} />
+      </div>      
+       <div className="game-app--info">
+          <p>{e[1]}</p>
+          <p><span>{e[2]}</span><span style={{fontWeight:"bold"}}>{paid&&" 8$"}</span></p>
+       </div>
+    </div>)}
+  </div>        
+</div>
+    )
+}
+
+const ForYou=()=>{
+const [arr,setArr]=useState([["https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","Subway Surfers","2B downloads"],  
+["https://api.sololearn.com/Uploads/Avatars/1.jpg","Sololearn","100M downloads"],
+
+["https://cdn57.androidauthority.net/wp-content/uploads/2019/09/Chess-Free-best-chess-games-for-Android-712x400.jpg","Chess King","100k downloads"], 
+
+["https://m.economictimes.com/thumb/height-450,width-600,imgsize-237405,msid-75754329/forzapic.jpg","Racing Game","40M downloads"],
+
+["http://www.archerybuff.com/wp-content/themes/Curious/images/archery-innovative-games.png","Archery Master","10k downloads"],
+
+["https://images.indianexpress.com/2017/03/supermariorunfb.jpg","Mario Run","5B downloads"], 
+]);
+    return(
+ <div className="t">
+        <ImageSlider />
+        <Games
+        title = {"Google Play Games"}
+        description ={"Browse our most popular Game"}
+        paid={false}
+        arr={arr}
+         />
+        <Games 
+        title = {"Trending Games"}
+        description ={"Browse our most popular Game"}
+        paid={false}
+        arr={arr}
+        />
+        <Games 
+        title = {"Recommended Games"}
+        description ={"Browse our most popular Game"}
+        paid={false}
+        arr={arr}
+        />
+ </div>
+    )
+}
+
+const TopChart=()=>{
+    return(
+<div className="k tp">
+        <CategoryTags
+           arr={["Top Free","Top Grossing","Trending","Paid"]}
+         />             
+  
+   <div className="top-charts-game-apps">
+    {[
+    ["https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","Subway Surfers","2B downloads"],  
+["https://api.sololearn.com/Uploads/Avatars/1.jpg","Sololearn","100M downloads"],
+
+["https://cdn57.androidauthority.net/wp-content/uploads/2019/09/Chess-Free-best-chess-games-for-Android-712x400.jpg","Chess King","100k downloads"], 
+
+["http://www.archerybuff.com/wp-content/themes/Curious/images/archery-innovative-games.png","Archery Master","10k downloads"],
+
+["https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","Subway Surfers","2B downloads"],  
+["https://api.sololearn.com/Uploads/Avatars/1.jpg","Sololearn","100M downloads"],
+
+["https://cdn57.androidauthority.net/wp-content/uploads/2019/09/Chess-Free-best-chess-games-for-Android-712x400.jpg","Chess King","100k downloads"], 
+
+["http://www.archerybuff.com/wp-content/themes/Curious/images/archery-innovative-games.png","Archery Master","10k downloads"],
+ 
+].map((k,i)=>
+    <div key={i} className="top-charts-apps">
+            <div className="top-chart-counter">{i+1}</div>
+            <img src={k[0]}/>
+            <div className="info">
+            <p className="top-charts-apps--name">
+              {k[1]}
+            </p>
+            <p className="top-charts-apps--tag">{k[2]}</p>
+            <p className="top-charts-apps--rating">{k[3]}</p>
+            </div> 
+       </div>
+     )}
+    
+       
+        
+         
+      
+   </div>
+</div>
+    )
+}
+const Premium=()=>{
+const [arr,setArr]=useState([["https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","Subway Surfers","2M downloads"],  
+["https://api.sololearn.com/Uploads/Avatars/1.jpg","Sololearn","100M downloads"],
+
+["https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","Subway Surfers","2M downloads"], 
+
+["https://api.sololearn.com/Uploads/Avatars/1.jpg","Sololearn","100M downloads"],
+
+["https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","Subway Surfers","2M downloads"],
+
+["https://api.sololearn.com/Uploads/Avatars/1.jpg","Sololearn","100M downloads"], 
+]);
+    return(
+        <div className="k tp">
+        <Games
+        title={"Recommended For You"}
+        description ={"Browse our most popular Game"}
+        paid={true}
+        arr={arr}
+        />
+        <ImageSlider/>
+        <Games
+        title={"Recommended For You"}
+        description ={"Browse our most popular Game"}
+        paid={true}
+        arr={arr}
+        />
+        <Games
+        title={"Recommended For You"}
+        description ={"Browse our most popular Game"}
+        paid={true}
+        arr={arr}
+        />
+        </div>
+    )
+}
+
+const Choice=()=>{
+    return(
+   <div className="choice-page">
+      <div className="choice-page--header">
+        <h3>Children's Choice</h3>
+        <p><span className="fa fa-arrow-right"></span></p>
+      </div>
+       
+       <div className="choice-option">
+          <div className="type">Action</div>
+          <div className="type">Action</div>
+          <div className="type">Action</div>
+          <div className="type">Action</div>
+       </div>  
+   </div>
+    )
+}
+const Family=()=>{
+const [arr,setArr]=useState([["https://i.dlpng.com/static/png/1202977-subway-surfer-hd-png-pluspngcom-280-subway-surfer-hd-png-subway-surfer-png-280_282_preview.png","Subway Surfers","2B downloads"],  
+["https://api.sololearn.com/Uploads/Avatars/1.jpg","Sololearn","100M downloads"],
+
+["https://cdn57.androidauthority.net/wp-content/uploads/2019/09/Chess-Free-best-chess-games-for-Android-712x400.jpg","Chess King","100k downloads"], 
+
+["https://m.economictimes.com/thumb/height-450,width-600,imgsize-237405,msid-75754329/forzapic.jpg","Racing Game","40M downloads"],
+
+["http://www.archerybuff.com/wp-content/themes/Curious/images/archery-innovative-games.png","Archery Master","10k downloads"],
+
+["https://images.indianexpress.com/2017/03/supermariorunfb.jpg","Mario Run","5B downloads"], 
+]);
+    return(
+        <div className="k tp">
+          <CategoryTags
+           arr={["Age 5 & Under","Age 6 & Over","Age 9 & Over","Categories"]}
+           />    
+          <Games 
+           title={"Recommended For You"}
+           description ={"Browse our most popular Game"}
+           paid={false}
+           arr={arr}
+          />
+           <Games 
+           title={"Recommended For You"}
+           description ={"Browse our most popular Game"}
+           paid={false}
+           arr={arr}
+          />
+         <Choice/>
+          <Games 
+           title={"Recommended For You"}
+           description ={"Browse our most popular Game"}
+           paid={false}
+           arr={arr}
+          />
+        </div>
+    )
+} 
+const Categories=()=>(
+<div className="k tp">   {[["https://i.ibb.co/SVHqrwY/IMG-20201013-220831.jpg","Archade"],["https://i.ibb.co/kgBtdHt/IMG-20201013-220742.jpg","Adventure"],["https://i.ibb.co/7y545p2/IMG-20201013-220800.jpg","Casino"],["https://i.ibb.co/ZBxD9TS/IMG-20201013-221108.jpg","Racing"],["https://i.ibb.co/gSQ64Yf/IMG-20201013-221148.jpg","Educational"], ["https://i.ibb.co/tH7PqYs/IMG-20201013-221028.jpg","Puzzle"],["https://i.ibb.co/XtbDTN1/IMG-20201013-220932.jpg","Casual"],["https://i.ibb.co/WHDMJqV/IMG-20201013-220953.jpg","Simulation"]
+   ].map((e,i)=>
+   <div key={i} className="category-card">
+         <img src={e[0]} />
+         <p>{e[1]}</p>
+  </div>)}    
+</div>);
+const Main =()=>{
+    return(
+<Router>
+   <div className ="main-page">
+      <Switch>          
+      <Route path="/categories">
+           <Header /> 
+           <Categories/>
+      </Route>
+        
+     <Route path="/family">
+           <Header />   
+           <Family/>
+      </Route> 
+      
+      <Route path="/editorChoice">
+            <Header /> 
+           <EditorChoice/>
+      </Route>      
+     
+      <Route path="/premium">
+            <Header /> 
+           <Premium/>
+      </Route>  
+      
+       <Route path="/topchart">
+           <Header /> 
+           <TopChart/>
+      </Route>  
+        
+      <Route path="/">
+           <Header />    
+           <ForYou/>
+      </Route>
+     
+      </Switch>
+   </div>
+</Router>
+    )
+};
+const BottomHeader=()=>(
+        <div className="bottom_header">
+         <div className="sec_1 sec">
+           <img className ="img active" src="https://dl.dropbox.com/s/qrnug7l5010g3uz/gameTab.png"/>
+           <p>Games</p>
+         </div>
+
+         <div
+         className="sec_2 sec">
+           <img className ="img" src="https://img.icons8.com/ios/50/000000/circled-menu.png"  />
+           <p>Apps</p>
+           
+         </div>
+         
+         <div  className="sec_3 sec">
+           <img className ="img" src="https://img.icons8.com/windows/50/000000/movies-folder.png" />
+           <p>Movies</p>
+           
+         </div>
+         <div  className="sec_4 sec">
+          <img className ="img" src="https://img.icons8.com/material-outlined/50/000000/book-stack.png" />          
+          <p>Books</p> 
+         </div>         
+        </div>
+);
+const TagHeader=()=>{
+const page = useRef(null);
+const activePage=(index)=>Array.from("Coder.").map((_,i)=>(index==i)?(page.current.children[index].classList.add("k")):(page.current.children[i].classList.remove("k"))); 
+ 
+    return(
+        <div ref={page} className="tagCon">              
+      {[["For You","/"],["Top Chart","/topchart"],["Premium","/premium"],["Categories","/categories"],["Family","/family"],["Editor's Choice","/editorchoice"]].map((k,i)=><Link key={i} className={i==0?"tag k link":"tag link"} onClick={()=>activePage(i)} to={`${k[1]}`}><span>{k[0]}</span></Link>)}
+        </div>
+
+    )
+}
+const SearchHeader =()=>{
+const sideBar= useRef(null);
+const sideBar_con= useRef(null);
+const showPage=()=>{
+sideBar.current.classList.add("side-bar--active");
+setTimeout(()=>sideBar_con.current.classList.add("con--active"),200); 
+}
+const hidePage=()=>{
+sideBar_con.current.classList.remove("con--inactive");
+sideBar_con.current.classList.remove("con--active");
+setTimeout(()=>sideBar.current.classList.remove("side-bar--active"),500); 
+}
+
+   return(
+       <div>
+        <div onClick={hidePage} ref={sideBar} className="side-bar">
+        <div ref={sideBar_con} className="con">
+            <div className="google_play_logo">
+            <img src="https://cdn.worldvectorlogo.com/logos/google-play-3.svg" alt="Google Play"/>
+            </div>
+    
+            <div className="section section_1">
+         {[["My apps & games","fa fa-home"],["Notification","fa fa-bell"],["Subscription","fa fa-refresh"],["Whishlist","fa fa-bookmark"]].map((k,i)=><div className="section-item" key={i}><span className={k[1]}></span><span>{k[0]}</span></div>)}
+            </div>
+            <div className="section section_2">
+               {[["Account","fa fa-user"],["Payment Methods","fa fa-book"],["Play Protect","fa fa-lock"],["Settings","fa fa-cog"]].map((k,i)=><div className="section-item" key={i}><span className={k[1]}></span><span>{k[0]}</span></div>)}
+            </div>
+            <div className="section section_3">
+               {[["Open in Movies App",["fa fa-play"]],["Open in Book App","fa fa-book"]].map((k,i)=><div className="section-item" key={i}><span className={k[1]}></span><span>{k[0]}</span></div>)}
+            </div>
+            <div className="section section_4">
+               {[["Reddem","fa fa-info"],["Help and feedback","fa fa-info"],["Parents Guide","fa fa-info"],["About Google Play","fa fa-info"]].map((k,i)=><div className="section-item" key={i}><span className={k[1]}></span><span>{k[0]}</span></div>)}
+               
+            </div>
+                        
+            
+            
+        </div>
+     </div>
+       <div className ="header">
+       <span onClick={showPage} className="fa fa-bars"></span>
+       <input type="text" placeholder="Search for apps & games" disabled/>
+       <span className="fa fa-user"></span>
+       </div>
+       </div>
+   ) 
+}
+
+const Header =()=>{
+    return(
+        <div>
+            <SearchHeader />
+            <TagHeader />
+        </div>
+    )
+}
+
+const App=()=>{
+    return(
+<Router>      
+  <div className="app"> 
+        <Main/>  
+        <BottomHeader />       
+  </div>
+</Router>
+    )
+};
+
+
+ReactDOM.render(
+<React.StrictMode>
+<App />
+</React.StrictMode>
+,root);
+
+load.remove();
+ </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js">        
+    </script> 
+       <script crossorigin src="https://unpkg.com/react@latest/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/5.2.0/react-router.min.js"></script>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.2.0/react-router-dom.js"></script>
+    <!--   
+        <script src="https://cdn.jsdelivr.net/npm/@react-spring/web@9.0.0-rc.3/index.umd.js"></script>
+      
+        <script  src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.7.2/prop-types.min.js"></script>
+      --> 
+        <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+         <div id="root"></div>  
+    </body>
+</html>

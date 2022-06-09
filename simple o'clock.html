@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>Soatli saxifa</title>
+</head>
+<style>
+  body {
+    font-size: 100;
+    background-color: red;
+  }
+</style>
+<SCRIPT>
+function Timer1() {
+var D1 = new Date();
+var TIME1 = " ";
+TIME1 = D1.getHours()+":"+D1.getMinutes()+":"+D1.getSeconds()
+document.forma01.dat.value=D1.toLocaleString();
+document.forma01.vremya.value=TIME1;
+setTimeout('Timer1()',1000)
+}
+</script>
+<BODY onload=Timer1() bgcolor="white" text="blue">
+<CENTER><H3>Soat</h3></center>
+<FORM name="forma01">
+
+<INPUT type="text" size=20 name="dat"><br>
+<textarea name="vremya" id=vremya rows="3" cols="10"></textarea>
+
+</form>
+</body>
+</html>

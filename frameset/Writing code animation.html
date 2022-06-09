@@ -1,0 +1,101 @@
+<!-- Created by Maz-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+            
+        <!-- Title -->
+        <title> Live Coding - Heart </title>
+        <style>
+          /* Created by Maz */
+
+/* General */
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    background: #222; 
+}
+
+/* Main */
+
+textarea {
+    width: 90%;
+    height: 200px;
+    margin: 15px auto 0 auto;
+    display: block;
+    resize: none;
+    font-family: "Inconsolata", monospace, arial, sans-serif;
+    background-color: #333;
+    color: #ccc;
+    border: none;
+    width:95%;
+    font-weight: bolder;
+}
+
+iframe {
+    margin: 0 auto;
+    display: block;
+    border: none;
+}
+
+textarea:focus { outline: none; }
+
+button {
+    display: block;
+    margin: 10px 0 10px 0;
+    width: 200px;
+}
+        </style>
+    </head>
+    
+
+    <body>
+        <div class="container">
+            <textarea></textarea><br>
+            <iframe width = "90%" 
+              height = "250"></iframe>
+        </div>
+        <script>
+
+$(document).ready(function(){
+    
+    var textarea = $("textarea")[0];
+    var iframe  = $("iframe")[0];
+    
+    var statements = "<!--Muzaffar Sharofiddinov-->\n<style>\n.heart-box {\ndisplay: flex;\n/*  align-items: center;  */\njustify-content: center;\nmargin: 70px;\nanimation: beating 1s infinite linear;\n }\n.heart-box .heart-left, \n .heart-box .heart-right {\n height: 110px;\n  width: 65px;\n  background: red;\n border-radius: 50px 50px 0 0;\n margin: 5px -16px;\n }\n.heart-box .heart-left {\ntransform: rotate(-45deg);\n}\n.heart-box .heart-right {\n transform: rotate(45deg);\n  }\n@keyframes beating {\n20% {\n transform: scale(1.5) ;\n }\n 30% {\n  transform: scale(1) ;\n }\n 40% {\n transform: scale(1.45) ;\n }\n  to {\n  transform: scale(1) ;\n }\n }\n font {\n color: red;\n font-size: 50px;\n justify-content: center;\nanimation: html 1s infinite linear;\n}\n @keyframes html {\nfrom {\n  font-size: 10px;\n}\n to {\n font-size: 70px;\n}\n }\n</style>\n<br>\n<body bgcolor="black" />\n<div class="heart-box">\n <div class="heart-left"></div>\n  <div class="heart-right"></div>\n</div><br>\n<p>\n<center/>  <font><big><i>I LOVE YOU!!!<BR>........</i>\n</big></font>\n</p>";
+    
+    var counter = 0;
+
+    setInterval(function(){
+        textarea.innerHTML += 
+        statements.charAt( counter );
+        counter++;
+    }, 80)
+
+    
+    iframe = iframe.contentWindow || (
+    iframe.contentDocument.document || 
+    iframe.contentDocument);
+    setInterval(function(){
+        iframe.document.open();
+        iframe.document.write(textarea.value);
+        iframe.document.close();
+        
+    },900)
+    
+
+var x = setInterval(function(){   $("textarea").scrollTop($("textarea")[0].scrollHeight)},0);setTimeout(function(){clearInterval(x)},70000)
+
+})
+
+
+        </script>
+    </body>
+
+</html>

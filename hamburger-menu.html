@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+   
+  </head>
+  <body>
+    
+    <style>
+   * {
+     padding: 0;
+     margin: 0;
+   } 
+  .wrapper {
+    height: 50vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-btn {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: block;
+  }
+  .menu-btn span::before,
+  .menu-btn span::active,
+  .menu-btn span {
+    height: 30px;
+    width: 30px;
+    background-color: #000000;
+    display: block;
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -10px;
+    top: 50%;
+    left: 50%;
+    
+  }
+  .menu-btn span::before ,
+  .menu-btn span::active {
+    content: '';
+    display: block;
+    transition: 0.5s;
+    
+  }
+  .menu-btn span::before {
+    transform: translateY(-5px);
+    
+  }
+  .menu-btn span::after {
+    transform: translateY(5px);
+  }
+  .menu-btn-active span::before {
+    transform: rotate(45deg);
+    transform-origin: left bottom;
+    width: 10px;
+  }
+  .menu-btn-active span::after {
+    transform: rotate(-45deg);
+    transform-origin: left top;
+    width: 10px;
+  }
+  .menu-btn-active span {
+    height: 0px;
+  }
+</style>
+
+
+
+
+<script>
+  $('.menu-btn').on('click ', function(e) {
+    e.preventDefault;
+    $(this).toggleClass('menu-btn-active');
+    
+  });
+</script>
+
+<div class="wrapper">
+    <a href="#" class="menu-btn">
+      <span></span>
+    </a>
+  </div>
+</div>
+  </body>
+</html>
+
+

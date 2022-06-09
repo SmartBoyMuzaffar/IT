@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+</head>
+<body>
+   
+
+   <script>
+      if(confirm("Do you love this app?")) {
+         alert("You pressed OK. Thank you.");
+      } else {
+         alert("You pressed Cancel.");
+      }
+   </script>
+</body>
+</html>

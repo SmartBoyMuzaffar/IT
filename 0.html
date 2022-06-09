@@ -1,0 +1,19 @@
+
+<html>
+<head>
+   <title> Try It Yourself </title>
+</head>
+<body>
+   <p> Try to write something, then click outside the <b>input</b>. </p>
+   <input type="text">
+   <p id="demo"></p>
+
+   <script>
+      var input = document.getElementsByTagName("input")[0];
+                          
+      input.addEventListener("change", function() {
+         document.getElementById("demo").innerHTML = input.value; 
+      });
+   </script>
+</body>
+</html>

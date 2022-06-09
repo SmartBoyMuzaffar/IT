@@ -1,0 +1,26 @@
+{
+  "productIds": ["sololearn_pro_test", "sololearn_pro_annual", "sololearn_pro_monthly"],
+
+  "imageUrl": "https://www.sololearn.com/Uploads/feed/pro-banner-eng.png",
+  "backgroundColor": "#378e3d",
+  "backgroundUrl": "https://www.sololearn.com/Uploads/feed/background1.png",
+  "imageProductID": "sololearn_pro_annual",
+  "title": "Choose your plan:",
+  "description": null,
+  "footer": "Your SoloLearn PRO subscription will automatically renew at the end of each term unless you cancel your subscription. By continuing, you agree to our <a href=\"https://www.sololearn.com/Terms-of-Use/\">Terms of Use</a> and <a href=\"https://www.sololearn.com/Privacy-Policy/\">Privacy Policy</a>.",
+
+  "offers": [
+    {
+      "productID": "sololearn_pro_annual",
+      "title": "Annual",
+      "description": "{price_monthly} / Month",
+      "discount": "-42%",
+      "backgroundColor": "accent"
+    },
+    {
+      "productID": "sololearn_pro_monthly",
+      "title": "Monthly",
+      "description": "{price_monthly} / Month"
+    }
+  ]
+}

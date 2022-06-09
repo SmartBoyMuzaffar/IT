@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+   <style type="text/css">
+      * {
+         box-sizing: border-box;
+      }
+      html, body {
+         margin: 0;
+         padding: 0;
+      }
+      .nav-bar {
+         background: lightgrey; /* same color as the li */
+         width: 30%;
+         height: 100%; /* takes the full width */
+         position: fixed;
+         top: 0px; /* sticks the side nav to the top */
+         left: 0px; /* sticks the side nav to the left side */
+         overflow-y: auto; /* adds a vertical scrolling functionality when needed */
+      }
+      .nav-bar a {
+         text-decoration: none;
+         color: black;
+         display: block;
+      }
+      .nav-bar > ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+      .nav-bar > ul > li > a {
+         padding: 10px;
+         background: lightgrey;
+      }
+      .nav-bar > ul > li > a:hover {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar .active {
+         background: #173459;
+         color: #f8f9f9;
+      }
+      .nav-bar li {
+         border-bottom: 1px solid #333;
+      }
+      .nav-bar li:last-child {
+         border: none;
+      }
+      .content {
+         margin-left: 30%;
+         width: 70%;
+         padding: 15px;
+      }
+   </style>
+</head>
+<body>
+   <div class="nav-bar">
+      <ul>
+         <li><a href="#" class="active"> Home </a></li>
+         <li><a href="#"> About </a></li>
+         <li><a href="#"> Articles </a></li>
+         <li><a href="#"> Gallery </a></li>
+      </ul>
+   </div>
+   
+   <div class="content">
+      <p> This is where the content of the page goes. Its container has 30% left margin (width of the side nav-bar) and has a 70% width. Try scrolling this page to see how the sidr nav works. </p>
+      <div style="background: green; height: 2000px"> This is a dummy text to make the page scrollable: Lorem ipsum dolor sit amet. </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<style>
+  .heart-box {
+    display: flex;
+/*  align-items: center;  */
+    justify-content: center;
+    margin: 70px;
+    animation: beating 1s infinite linear;
+  }
+  .heart-box .heart-left, 
+  .heart-box .heart-right {
+    height: 110px;
+    width: 65px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    margin: 5px -16px;
+  }
+  .heart-box .heart-left {
+    transform: rotate(-45deg);
+  }
+  .heart-box .heart-right {
+    transform: rotate(45deg);
+  }
+  @keyframes beating {
+    20% {
+      transform: scale(1.5) ;
+    }
+    30% {
+      transform: scale(1) ;
+    }
+    40% {
+      transform: scale(1.45) ;
+    }
+    to {
+      transform: scale(1) ;
+    }
+  }
+  font {
+    color: red;
+    font-size: 50px;
+    justify-content: center;
+    animation: html 1s infinite linear;
+  }
+  @keyframes html {
+    from {
+      font-size: 10px;
+    }
+    to {
+      font-size: 70px;
+    }
+  }
+</style>
+
+<br>
+<body bgcolor="black" />
+<div class="heart-box">
+  <div class="heart-left"></div>
+  <div class="heart-right"></div>
+  
+</div><br>
+<p>
+<center/>  <font><big><i>I LOVE YOU!!!<BR>........</i>
+</big></font>
+</p>
+

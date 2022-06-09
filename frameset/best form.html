@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+   <style type="text/css">
+      * {
+         box-sizing: border-box;
+      }
+      input[type="checkbox"], input[type="radio"] {
+         display: none; /* hide the default check boxes and radios */
+      }
+      /* style the label elements */
+      label {
+         display: block;
+         width: 100%;
+         padding: 15px;
+         border: 1px solid #0076ff;
+         margin-bottom: 10px;
+         border-radius: 10px;
+         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+      }
+      /* create our custom checkbox and radio */
+      label > span {
+         display: inline-block;
+         width: 15px;
+         height: 15px;
+         border: 3px solid #0076ff;
+         border-radius: 50%;
+         margin-right: 30px;
+      }
+      /* style the labels when their corresponding inputs are checked */
+      input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+         background: #173459;
+         color: white;
+      }
+      /* style the custom check boxes and radios when their corresponding inputs are checked */
+      input[type="checkbox"]:checked + label > span, input[type="radio"]:checked + label > span {
+         background: #0076ff;
+      }
+   </style>
+</head>
+<body>
+   <h2> Styling Check Boxes </h2>
+   <p> Check boxes allow users to select multiple options from a list of choices. </p>
+   
+   <form>
+   
+      <input type="checkbox" name="fruits" value="Apple" id="apple" />
+      <label for="apple"><span></span> Apple </label>
+      
+      <input type="checkbox" name="fruits" value="Orange" id="orange" />
+      <label for="orange"><span></span> Orange </label>
+      
+      <input type="checkbox" name="fruits" value="Mango" id="mango" />
+      <label for="mango"><span></span> Mango </label>
+      
+      <input type="checkbox" name="fruits" value="Banana" id="banana" />
+      <label for="banana"><span></span> Banana </label>
+      
+   </form>
+   
+   <h2> Styling Radio Inputs </h2>
+   <p> Radio inputs allow users to select only one option from a list of choices. </p>
+   
+   <form>
+   
+      <input type="radio" name="person" value="Mang Juan" id="mang-juan" />
+      <label for="mang-juan"><span></span> Mang Juan </label>
+      
+      <input type="radio" name="person" value="Mang Pedro" id="mang-pedro" />
+      <label for="mang-pedro"><span></span> Mang Pedro </label>
+      
+      <input type="radio" name="person" value="Mang Lito" id="mang-lito" />
+      <label for="mang-lito"><span></span> Mang Lito </label>
+      
+      <input type="radio" name="person" value="Mang Arturo" id="mang-arturo" />
+      <label for="mang-arturo"><span></span> Mang Arturo </label>
+      
+   </form>
+</body>
+</html>

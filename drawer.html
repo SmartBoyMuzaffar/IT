@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+  body {
+display: block;
+
+}
+#app {
+
+background: darkslategrey;
+border: 1px solid black;
+}
+
+#tb {
+display: flex;
+flex-wrap: wrap;
+height: 45px;
+background: red;
+border: 1px solid black;
+align-content: center;
+}
+.title {
+margin: auto auto;
+color: white;
+font-size:25px;
+}
+#tb_btn {
+position: absolute;
+margin-top: 10px ;
+height: 35px;
+background-color: inherit;
+}
+.btn {
+display: block;
+width: 25px;
+height: 4px;
+background: white;
+margin-top: 4px;
+margin-left: 10px;
+}
+#menu {
+position: absolute;
+display: flex;
+align-content: center;
+transition:500ms;
+height: 127.5%;
+background:white;
+}
+#menu ul{
+position: relative;
+}
+#menu li {
+margin-top: 15px;
+margin-bottom: 10px;
+margin-left: -40px;
+list-style: none;
+font-size: 16px;
+color: black;
+}
+#menu hr{
+margin-left: -40px;
+width: 180px;
+}
+img {
+width: 20px;
+height: 20px;
+margin-right: 5px;
+vertical-align: middle;
+
+}
+a {
+  text-decoration: none;
+}
+ a:hover {
+  background: red;
+  color: blue;
+  right: 1000px;
+}
+div {
+  border: solid black;
+}
+</style>
+<script>
+  window.onload = function(){
+
+var app = document.getElementById("app");
+var tb_btn = document.getElementById("tb_btn");
+var menu = document.getElementById("menu");
+var menuOpen = true;
+
+closeMenu();
+
+function closeMenu(){
+var menu = document.getElementById("menu").style.marginLeft="-50%";
+menuOpen = false;
+}
+function openMenu(){
+var menu = document.getElementById("menu").style.marginLeft="0%";
+menuOpen = true;
+}
+
+tb_btn.onclick = function(){
+if(menuOpen === false){
+openMenu();
+} else {
+closeMenu();
+}
+};
+
+
+};
+</script>
+</head>
+<body>
+<div id="">
+
+
+<div id="tb">
+<div id="tb_btn">
+<div class="btn"></div>
+<div class="btn"></div>
+<div class="btn"></div>
+</div>
+</div>
+<div id="menu">
+<ul>
+  <a href="#" >
+<li><img src='https://i.ibb.co/c3VF1Xy/ic-regulamento.png'> Item 1</li></a>
+<a href="#" >
+<li><img src='https://i.ibb.co/c3VF1Xy/ic-regulamento.png'> Item 2</li> 
+</a>
+<a href="#" >
+<li><img src='https://i.ibb.co/c3VF1Xy/ic-regulamento.png'> Item 3</li> 
+</a>
+<hr>
+<a href="#" >
+<li><img src='https://i.ibb.co/88cVDxK/ic-settings.png'> Settings</li>
+</a>
+</ul>
+</div>
+<pre>
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+jsnnsnsnnjd
+</pre>
+</header>
+
+</div>
+</body>
+</html>
