@@ -1,5 +1,11 @@
 ### Hi there 👋
 
+I'm Smart Boy 👉😎👈
+My full name is Muzaffar Sharofitdinov
+
+
+
+
 <!--
 **SmartBoyMuzaffar/SmartboyMuzaffar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
