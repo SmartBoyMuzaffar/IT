@@ -2,14 +2,13 @@
 
 I'm Smart Boy 👉😎👈
 <br>
+<img src="https://github.com/SmartBoyMuzaffar/SmartboyMuzaffar/blob/gh-pages/devil-boy-minimal-mask-4k-fz-1280x2120.jpg"></img>
 
 <br>
 My full name is Muzaffar Sharofitdinov
 
 
 
-
-<!--
 **SmartBoyMuzaffar/SmartboyMuzaffar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -22,4 +21,3 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
